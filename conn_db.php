@@ -23,11 +23,7 @@ $all_articles = getAllArticles($connect);
     // output data of each row
   foreach ($all_articles as $article) {
       ?>
-      
-      <?php echo $article['title']; // Кароче вытягивашь по названию колонки в базе данных, например заголовок статьи в бд будет title?>   
-      <?php echo $article['content']; ?>
-      
-      
+
       <?php
 }
 } else {
