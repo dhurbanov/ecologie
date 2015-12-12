@@ -50,6 +50,18 @@
 		<div class="do2">
 			<div id="sidebar">
 			<?php include "conn_db.php"; ?>
+			<?php
+			  if (count($all_articles) > 0) {
+			    // output data of each row
+			 	foreach ($all_articles as $article) {
+			      ?>
+
+			      <?php
+				}
+				} else {
+				    echo "0 results";
+			}
+			?>
 				<ul>
 					<li class="menubtn"><a href="#"><?php echo $article['title']; ?></a></li>
 					<li class="menubtn"><a href="#">Главная</a></li>

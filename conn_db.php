@@ -18,15 +18,4 @@ function getAllArticles($connect) //Функция для структуриро
 $all_articles = getAllArticles($connect);
 ?>
 
- <?php
-  if (count($all_articles) > 0) {
-    // output data of each row
-  foreach ($all_articles as $article) {
-      ?>
-
-      <?php
-}
-} else {
-    echo "0 results";
-}
-?>
+ 
