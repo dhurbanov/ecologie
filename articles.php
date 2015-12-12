@@ -50,30 +50,27 @@
 		<div class="do2">
 			<div id="sidebar">
 				<ul>
-					<li class="menubtn"><a href="#">Главная</a></li>
-					<li class="menubtn"><a href="#">Главная</a></li>
-					<li class="menubtn"><a href="#">Главная</a></li>
-					<li class="menubtn"><a href="#">Главная</a></li>
-					<li class="menubtn"><a href="#">Главная</a></li>
-					<li class="menubtn"><a href="#">Главная</a></li>
+				<?php include "conn_db.php"; ?>
+				 	<?php 
+						if (count($all_articles) > 0) {
+						foreach ($all_articles as $article) { 
+						?> 
+					<li class="menubtn"><a href="?id=<?php echo $article['id']; ?>"> <?php echo $article['title']; ?> </a></li>
+					<?php 
+						} 
+						} else { 
+						echo "0 results"; 
+						} 
+						?>
 				</ul>
+
 			</div>
 			<div id="content">
-			<?php include "conn_db.php"; ?>
-			<?php
-			  if (count($all_articles) > 0) {
-			    // output data of each row
-			  foreach ($all_articles as $article) {
-			      ?>
+			
+			
 				<div class="a-title">
-					<?php echo $article['title']; ?>
+
 				</div>
-				<?php
-					}
-					} else {
-					    echo "0 results";
-					}
-					?>
 				<div class="a-cont">
 					
 				</div>
