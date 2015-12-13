@@ -42,7 +42,7 @@
 		    </div>
 		    <label for="popupCheckboxOne" class="popup-shower">Войти</label>
 			<div class="connect">
-				<a href="#footer">Присоединиться</a>
+				<a href="index.php">Присоединиться</a>
 			</div>
 		</div>
 		<hr>
@@ -51,6 +51,8 @@
 			<div id="sidebar">
 				<ul>
 				<?php include "conn_db.php"; ?>
+				<?php $article = getArticle(1, $connect) ?>
+				<?php $article = getArticle($_GET["id"], $connect) ?>	
 				 	<?php 
 						if (count($all_articles) > 0) {
 						foreach ($all_articles as $article) { 
@@ -66,13 +68,12 @@
 
 			</div>
 			<div id="content">
-			
-			
+					
 				<div class="a-title">
-
+					<a href="?id=<?php echo $article['id']; ?>"> <?php echo $article['title']; ?>
 				</div>
 				<div class="a-cont">
-					
+					<a href="?id=<?php echo $article['id']; ?>"> <?php echo $article['content']; ?>
 				</div>
 			</div>
 			<div class="clear"></div>
