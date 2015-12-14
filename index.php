@@ -84,7 +84,8 @@
 					<div class="form-input">
 						<div class="enter">
 							<div class="hint"><span class="q_green">Зарегистрируйтесь</span>, <br> чтобы быть на связи и получать последние новости</div>
-							<form name="formMain" method="POST" action="">
+							<form name="formMain" method="POST" action="register.php">
+			      				<input type="text" name="email" class="name" required="" placeholder="Введите e-mail">
 								<input type="text" name="name" class="name" required="" placeholder="Введите логин">
 								<input type="password" name="password" class="password" required="" placeholder="Введите пароль">
 								<input type="submit" class="btn" value="Хочу помогать!">
