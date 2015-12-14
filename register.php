@@ -1,5 +1,5 @@
 <?php
-include("connection.php");
+include("config.php");
 $email = $_POST['email'];
 $username = $_POST['username'];
 $password = md5($_POST['password']);

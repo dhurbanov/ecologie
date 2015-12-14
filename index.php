@@ -33,7 +33,7 @@
 			  <div class="popup">
 			    <div class="popup-content">
 			        <label for="popupCheckboxOne" class="popup-closer">&#215;</label>
-			      		<form name="formEnter" method="POST" action="">
+			      		<form name="formEnter" method="POST" action="enter.php">
 								<input type="text" name="name" class="name" required="" placeholder="Введите логин">
 								<input type="password" name="password" class="password" required="" placeholder="Введите пароль">
 								<input type="submit" class="btn" value="Войти">

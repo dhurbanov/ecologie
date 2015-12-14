@@ -51,7 +51,7 @@
 			<div id="sidebar">
 				<ul>
 				<?php include "conn_db.php"; ?>
-				<?php $article = getArticle($_GET["id"], $connect) ?>
+				
 				 	<?php 
 						if (count($all_articles) > 0) {
 						foreach ($all_articles as $article) { 
@@ -69,9 +69,12 @@
 			<div id="content">
 					
 				<div class="a-title">
+				<?php $article = getArticle($_GET["id"], $connect) ?>
 					<?php echo $article['title']; ?>
 				</div>
 				<div class="a-cont">
+				
+				<?php $article = getArticle($_GET["id"], $connect) ?>
 					<?php echo $article['content']; ?>
 				</div>
 			</div>
