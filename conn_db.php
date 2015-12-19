@@ -1,9 +1,5 @@
 <?php
-$host = "localhost";
-$login = "root";
-$password = "";
-$dbname = "ecologie";
-$connect = new PDO("mysql:host=$host;dbname=$dbname", $login, $password);
+include("config.php");
 
 function getArticle($id, $connect)
 {
@@ -14,7 +10,7 @@ function getArticle($id, $connect)
     return $row;
 }
 
-function getAllArticles($connect) //Функция для структурирования кода, можно и без нее
+function getAllArticles($connect)
 {
     $sql = "SELECT * FROM articles";
     $sth = $connect->prepare($sql);

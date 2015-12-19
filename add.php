@@ -46,43 +46,22 @@
 			</div>
 		</div>
 		<hr>
-		<div id="block2">
-		<div class="do2">
-			<div id="sidebar">
-				<ul>
-				<?php include "conn_db.php"; ?>
-				
-				 	<?php 
-						if (count($all_articles) > 0) {
-						foreach ($all_articles as $article) { 
-						?> 
-					<li class="menubtn"><a href="?id=<?php echo $article['id']; ?>"> <?php echo $article['title']; ?> </a></li>
-					<?php 
-						} 
-						} else { 
-						echo "0 results"; 
-						} 
-						?>
-				</ul>
-			</div>
-			<div id="content">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				<div class="a-title">
-				<?php $article = getArticle($_GET["id"], $connect) ?>
-					<?php echo $article['title']; ?>
-				</div>
-				<div class="a-cont">
-				
-				<?php $article = getArticle($_GET["id"], $connect) ?>
-					<?php echo $article['content']; ?>
+		<div id="block2a">
+		<div class="do3">
+			<div id="content2">
+				<div class="add">
+					<select id="sel" form="addData">
+						<option>Статья</option>
+						<option>Новость</option>
+					</select>
+					<form name="addData" method="GET" action="">
+						<input class="in_title" type="text" name="title" placeholder="Введите название"><br>
+						<textarea class="in_text" type="text" name="text" placeholder="Введите текст"></textarea><br>
+						<input class="in_btn" type="submit" class="btn" value="Отправить">
+					</form>
 				</div>
 			</div>
-			<div class="clear"></div>
+		<div class="clear"></div>
 		</div>
 		</div>		
 		<hr>

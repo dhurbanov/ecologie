@@ -1,3 +1,7 @@
+<?php
+session_start();
+include ("connection.php");
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +16,7 @@
 	<div id="wrapper">
 		<div id="header">
 		  <a href="index.php" class="logo"><img src="img/logo.png" alt="Logo"></a>
+		  <div class="welcome"><p>Здравствуй, <span class="q_green"> мудила</span>!</p><a href="add.php"> Добавить статью/новость</a></div>
 		  <div class="social">
 		  	<a href="http://vk.com/" class="icon-vk"><img src="img/icon-vk.png"</a>
 		  	<a href="http://twitter.com/" class="icon-twitter"><img src="img/icon-twitter.png"</a>
@@ -23,10 +28,10 @@
 		<hr>
 	<div id="navigation">
 			<ul>
-				<li><a href="#"><?php echo 'Главная' ?></a></li>
-				<li><a href="#">Новости</a></li>
+				<li><a href="index.php">Главная</a></li>
+				<li><a href="news.php">Новости</a></li>
 				<li><a href="articles.php">Статьи</a></li>
-				<li><a href="#">О проекте</a></li>
+				<li><a href="about.php">О проекте</a></li>
 			</ul>
 			<div class="popup-wrapper">
 			  <input type="checkbox" class="popup-checkbox" id="popupCheckboxOne">
@@ -34,7 +39,7 @@
 			    <div class="popup-content">
 			        <label for="popupCheckboxOne" class="popup-closer">&#215;</label>
 			      		<form name="formEnter" method="POST" action="enter.php">
-								<input type="text" name="name" class="name" required="" placeholder="Введите логин">
+								<input type="text" name="username" class="name" required="" placeholder="Введите логин">
 								<input type="password" name="password" class="password" required="" placeholder="Введите пароль">
 								<input type="submit" class="btn" value="Войти">
 						</form>
